@@ -9,3 +9,11 @@ ul li {
     margin: 0  20px;
     cursor: pointer;
 }
+ul li a {
+    text-decoration: none;
+}
+
+ul li a .fa-brands{
+    font-size: 6em;
+    color: #222;
+}
