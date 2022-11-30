@@ -37,17 +37,44 @@ ul li:nth-child(1)::before {
     border-bottom: 4px solid #dc2743;
 }
 
-ul li:nth-last-child(3)::before {
+ul li:nth-last-child(2)::before {
     content: "\f099";
     color: #1da1F2;
     border-bottom: 4px solid #1da1F2;
 }
 
-ul li:nth-last-child(2)::before {
+ul li:nth-last-child(1)::before {
     content: "\f232";
     color: #25d366;
     border-bottom: 4px solid #25d366;
 }
 ul li:hover::before {
     height: 100%;
+}
+
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-size: 6em;
+    color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+h2 span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    overflow: hidden;
+}
+
+h2:hover span:nth-child(1){
+    transform: translateY(-18px);
 }
