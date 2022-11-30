@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+}
 ul {
     position: relative;
     display: flex;
@@ -6,7 +18,7 @@ ul {
 ul li {
     position: relative;
     list-style: none;
-    margin: 0  20px;
+    margin: 0 20px;
     cursor: pointer;
 }
 ul li a {
@@ -14,11 +26,11 @@ ul li a {
 }
 
 ul li a .fa-brands{
-    font-size: 4em;
+    font-size: 6em;
     color: #222;
 }
 
-ul li::before{
+ul li a::before{
     font-family: "FontAwesome";
     position: absolute;
     top: 0;
@@ -29,7 +41,7 @@ ul li::before{
     transition: 0.5s ease-in-out;
 }
 
-ul li:nth-child(1)::before {
+ul li:nth-child(1) a::before {
     content: "\f16d";
     background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     -webkit-background-clip: text;
@@ -37,18 +49,19 @@ ul li:nth-child(1)::before {
     border-bottom: 4px solid #dc2743;
 }
 
-ul li:nth-last-child(2)::before {
+ul li:nth-child(3) a::before {
+    content: "\f232";
+    color: #25d366;
+    border-bottom: 4px solid #25d366;    
+    
+}
+
+ul li:nth-child(2) a::before {
     content: "\f099";
     color: #1da1F2;
     border-bottom: 4px solid #1da1F2;
 }
-
-ul li:nth-last-child(1)::before {
-    content: "\f232";
-    color: #25d366;
-    border-bottom: 4px solid #25d366;
-}
-ul li:hover::before {
+ul li:hover a::before {
     height: 100%;
 }
 
@@ -77,4 +90,38 @@ h2 span:nth-child(1){
 
 h2:hover span:nth-child(1){
     transform: translateY(-18px);
+}
+
+h2 span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    transition: 0.5s;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    overflow: hidden;
+}
+
+h2:hover span:nth-child(2) {
+    transform: translateY(18px);
+}
+
+h2 span:nth-child(3) {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    transform: translateY(50%) scaleY(0);
+    width: 91%;
+    color: #000;
+    background: #ff0;
+    font-size: 0.25em;
+    letter-spacing: 0.7em;
+    text-align: center;
+    padding-left: 20px;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+he:hover span:nth-child(3) {
+    transform: translateY(-50%) scaleY(1);
 }
